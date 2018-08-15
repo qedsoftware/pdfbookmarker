@@ -43,7 +43,7 @@ def addBookmarks(pdf_in_filename, bookmarks_tree, pdf_out_filename=None):
         [2] http://stackoverflow.com/questions/18855907/adding-bookmarks-using-pypdf2
         [3] http://stackoverflow.com/questions/3009935/looking-for-a-good-python-tree-data-structure
     """
-    pdf_out = PdfFileMerger()
+    pdf_out = PdfFileMerger(strict=False)
 
     # read `pdf_in` into `pdf_out`, using PyPDF2.PdfFileMerger()
     with open(pdf_in_filename, 'rb') as inputStream:
